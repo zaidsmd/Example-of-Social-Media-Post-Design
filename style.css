@@ -27,7 +27,7 @@ article {
     display: flex;
     flex-direction: row;
     align-items: stretch;
-    width: 60%;
+    width: 83%;
     background-color: hsl(0, 0%, 100%);
     border-radius: 1.5rem;
     overflow: clip;
@@ -44,7 +44,7 @@ article {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    gap: 7%;
+    gap: 3vh;
     padding: 6%;
 }
 .category   {
