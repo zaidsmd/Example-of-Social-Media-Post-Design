@@ -1,127 +1,137 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap');
 
-*   {
-    font-family: 'Lexend Deca', sans-serif;
-    font-size: 15px;
+
+* {
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(30, 38%, 92%);
+    min-height: 100vh;
+}
+
+main {
+    padding: 3%;
 }
 
 article {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-.cards   {
-    width: 70%;
-    height: 67%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: stretch;
-}
-.card:first-child {
-    background-color: hsl(31, 77%, 52%);
-    border-radius: 1rem 0 0 1rem;
-}
-.card:nth-child(2)  {
-    background-color: hsl(184, 100%, 22%);
-}
-.card:last-child  {
-    background-color: hsl(179, 100%, 13%);
-    border-radius: 0 1rem  1rem 0;
-}
-
-.card   {
-    width: 33.3%;
-    padding: 7%;
-    color: hsl(255,100%,100%);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
 }
-h2  {
-    font-family: 'Big Shoulders Display', cursive;
-    font-weight: 700;
-    font-size: 2.5rem;
+
+.card {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    max-width: 600px;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 1.5rem;
+    overflow: clip;
+}
+
+.product {
+    width: 50%;
+}
+
+.product img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.description {
+    width: 50%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    padding: 5%;
+}
+
+.category {
+    font-size: 1rem;
+    letter-spacing: 8px;
     text-transform: uppercase;
+    font-weight: 500;
+    color: hsl(228, 12%, 48%);
 }
-p   {
-    font-size: 1.1rem;
+
+.perfume-name {
+    font-size: 2.5rem;
+    line-height: 2.4rem;
+    font-weight: 700;
+    font-family: "Fraunces", serif;
+    color: hsl(212, 21%, 14%);
+}
+
+.text {
+    color: hsl(228, 12%, 48%);
+    font-size: 1rem;
+    letter-spacing: 0.02rem;
     line-height: 2rem;
-    letter-spacing: 0.0289rem;
 }
-button  {
-    padding: 6.5% 20%;
-    border-radius: 55rem;
+
+.price-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 7%;
+}
+
+.price {
+    color: hsl(158, 36%, 37%);
+    font-size: 2.8rem;
+    font-weight: 700;
+    font-family: "Fraunces", serif;
+}
+
+.old-price {
+    font-size: 1.1rem;
+    text-decoration: line-through;
+    color: hsl(228, 12%, 48%);
+}
+
+button {
+    padding: 5%;
+    background-color: hsl(158, 36%, 37%);
+    border-radius: 1rem;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 700;
+    outline: none;
     border: none;
 }
-button:hover    {
-    border: 1px solid hsl(255,100%,100%);
-    background-color: transparent;
-    transition: all ease-in-out 300ms;
-    color: white !important;
+
+button:hover {
+    background-color: hsl(154, 39%, 25%);
 }
-.card:first-child   button{
-    color:hsl(31, 77%, 52%) ;
+
+footer {
+    margin-top: 30px;
 }
-.card:nth-child(2)   button{
-    color:hsl(184, 100%, 22%) ;
-}
-.card:last-child   button{
-    color:hsl(179,100%,13%) ;
-}
-.attribution    {
-    margin-top: 10%;
-}
-@media only screen and (max-width:1350px) {
-    .cards  {
-        width: 80%;
-    }
-}
-@media only screen and (max-width:1250px) {
-    .cards  {
-        width: 85%;
-    }
-}
-@media only screen and (max-width:1150px) {
-    .cards  {
-        width: 90%;
-    }
-}
-@media only screen and (max-width:1050px) {
-    .cards  {
-        width: 95%;
-    }
-}
-@media only screen and (max-width:900px) {
-    article {
-        height: fit-content;
-        width: 100%;
-    }
-    .cards  {
+
+@media only screen and (max-width: 630px) {
+    .card {
         flex-direction: column;
-        align-items: center;
+    }
+
+    .product {
         width: 100%;
     }
-    .card   {
-        width: 50%;
-    }
-    .card:first-child {
-        background-color: hsl(31, 77%, 52%);
-        border-radius: 1rem 1rem 0 0;
-    }
-    .card:last-child  {
-        background-color: hsl(179, 100%, 13%);
-        border-radius: 0 0  1rem 1rem;
+
+    .description {
+        width: 100%;
     }
 
 
-}
-@media only screen and (max-width:650px) {
-    .card  {
-        width: 80%;
-    }
 }
